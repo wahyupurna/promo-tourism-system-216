@@ -1,0 +1,170 @@
+<!-- <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-300">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3"
+  >
+    <a routerLink="/" class="flex items-center">
+      <span class="self-center text-xl font-semibold whitespace-nowrap"
+        >PromoTourism</span
+      >
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <ng-container *ngIf="!isLoggedIn">
+        <a
+          routerLink="/login"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Login
+        </a>
+      </ng-container>
+
+      <ng-container *ngIf="isLoggedIn">
+        <button
+          (click)="logout()"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Logout
+        </button>
+      </ng-container>
+      <button
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        type="button"
+        (click)="toggleOpen()"
+        [ngClass]="{ active: isOpen }"
+      >
+        <svg
+          class="w-5 h-5 text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar"
+    >
+      <ul
+        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <ng-container>
+          <li>
+            <a
+              routerLink="/"
+              routerLinkActive="bg-blue-700 text-white md:text-blue-700 md:dark:text-blue-500"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/products"
+              routerLinkActive="bg-blue-700 text-white md:text-blue-700 md:dark:text-blue-500"
+              [routerLinkActiveOptions]="{ exact: false }"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0"
+              >Products</a
+            >
+          </li>
+        </ng-container>
+
+        <ng-container *ngIf="isLoggedIn">
+          <li>
+            <div class="border-l border-gray-200 h-6"></div>
+          </li>
+          <li>
+            <a
+              routerLink="/user-dashboard"
+              routerLinkActive="bg-blue-700 text-white md:text-blue-700 md:dark:text-blue-500"
+              [routerLinkActiveOptions]="{ exact: false }"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0"
+              aria-current="page"
+              >Dashboard</a
+            >
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+
+  <div class="flex flex-col justify-center p-4 pt-0" *ngIf="isOpen">
+    <div class="bg-gray-100 rounded-lg p-4">
+      <ul class="space-y-4">
+        <ng-container>
+          <li>
+            <a
+              routerLink="/"
+              routerLinkActive="font-bold"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/products"
+              routerLinkActive="font-bold"
+              [routerLinkActiveOptions]="{ exact: false }"
+              >Products</a
+            >
+          </li>
+        </ng-container>
+
+        <ng-container *ngIf="isLoggedIn">
+          <li>
+            <a
+              routerLink="/user-dashboard"
+              routerLinkActive="font-bold"
+              [routerLinkActiveOptions]="{ exact: false }"
+              >Dashboard</a
+            >
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+
+<nav class="flex-wrap bg-stone-300 border-gray-200 dark:bg-gray-900">
+  <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+      <a href="#" class="flex items-center">
+          <img src="assets/images/pt.png" class="h-8 mr-3" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-stone-700">Promo Tourism</span>
+      </a>
+      <div class="flex items-center">
+          <a href="login" class="text-sm p-2 bg-stone-700 text-white rounded">Login</a>
+          <a class="text-gray-950 mx-2">|</a>
+          <a href="register" class="text-sm p-2 bg-stone-700 text-white rounded">Register</a>
+      </div>
+  </div>
+</nav>
+<nav class="flex-col bg-stone-500 dark:bg-gray-700">
+  <div class="max-w-screen-xl px-4 py-3 mx-auto">
+      <div class="flex items-center">
+          <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
+              <li>
+                  <a href="/" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+              </li>
+              <li>
+                  <a href="products" class="text-gray-900 dark:text-white hover:underline">Products</a>
+              </li>
+              <li>
+                  <a href="#" class="text-gray-900 dark:text-white hover:underline">Team</a>
+              </li>
+              <li>
+                  <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
