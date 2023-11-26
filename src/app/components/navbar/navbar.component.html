@@ -139,32 +139,66 @@
   <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
       <a href="#" class="flex items-center">
           <img src="assets/images/pt.png" class="h-8 mr-3" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-stone-700">Promo Tourism</span>
+          <span class="self-center text-xl font-semibold dark:text-stone-700">Promo Tourism</span>
       </a>
       <div class="flex items-center">
-          <a href="login" class="text-sm p-2 bg-stone-700 text-white rounded">Login</a>
-          <a class="text-gray-950 mx-2">|</a>
-          <a href="register" class="text-sm p-2 bg-stone-700 text-white rounded">Register</a>
+          <a href="register" class="text-sm font-semibold py-2 px-3 mr-2 text-gray-950 hover:bg-stone-400 rounded-2xl hover:text-white">Sign Up</a>
+          <a href="login" class="text-sm py-2 px-3 bg-stone-700 text-white rounded-3xl hover:bg-stone-500">Sign In</a>
       </div>
   </div>
 </nav>
-<nav class="flex-col bg-stone-500 dark:bg-gray-700">
+<nav class="flex flex-wrap bg-stone-500 dark:bg-gray-700">
   <div class="max-w-screen-xl px-4 py-3 mx-auto">
       <div class="flex items-center">
-          <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
-              <li>
-                  <a href="/" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
-              </li>
-              <li>
-                  <a href="products" class="text-gray-900 dark:text-white hover:underline">Products</a>
-              </li>
-              <li>
-                  <a href="#" class="text-gray-900 dark:text-white hover:underline">Team</a>
-              </li>
-              <li>
-                  <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
-              </li>
-          </ul>
+        <ng-container>
+          <ul class="flex flex-row font-medium mt-0 mr-2 space-x-4 text-sm">
+            <li>
+                <a routerLink="/"
+                routerLinkActive="font-bold text-white"
+                [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            </li>
+            <li>
+                <a routerLink="/products"
+                routerLinkActive="font-bold text-white"
+                [routerLinkActiveOptions]="{ exact: true }">Products</a>
+            </li>
+        </ul>
+        </ng-container>
       </div>
+  </div>
+  <div class="flex flex-col justify-center p-4 pt-0" *ngIf="isOpen">
+    <div class="max-w-screen-xl px-4 py-3 mx-auto">
+      <div class="flex items-center">
+        <ng-container>
+          <li>
+            <a
+              routerLink="/"
+              routerLinkActive="font-bold text-white"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/products"
+              routerLinkActive="font-bold text-white"
+              [routerLinkActiveOptions]="{ exact: false }"
+              >Products</a
+            >
+          </li>
+        </ng-container>
+
+        <ng-container *ngIf="isLoggedIn">
+          <li>
+            <a
+              routerLink="/user-dashboard"
+              routerLinkActive="font-bold text-white"
+              [routerLinkActiveOptions]="{ exact: false }"
+              >Dashboard</a
+            >
+          </li>
+        </ng-container>
+      </div>
+    </div>
   </div>
 </nav>
