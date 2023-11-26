@@ -65,7 +65,7 @@ import { User } from '../../user';
           <div *ngIf="username.errors?.['required']">
             <div
               id="alert-2"
-              class="flex items-center p-1 mb-1 text-red-600"
+              class="flex items-center text-red-600"
               role="alert"
             >
               <svg
@@ -100,7 +100,7 @@ import { User } from '../../user';
           <div *ngIf="email.errors?.['required']">
             <div
               id="alert-2"
-              class="flex items-center p-1 mb-1 text-red-600 "
+              class="flex items-center text-red-600 "
               role="alert"
             >
               <svg
@@ -122,7 +122,7 @@ import { User } from '../../user';
           <div *ngIf="email.errors?.['email']">
             <div
               id="alert-2"
-              class="flex items-center p-1 mb-1 text-red-600 "
+              class="flex items-center text-red-600 "
               role="alert"
             >
               <svg
@@ -158,7 +158,7 @@ import { User } from '../../user';
           <div *ngIf="password.errors?.['required']">
             <div
               id="alert-2"
-              class="flex items-center p-1 text-red-600 "
+              class="flex items-center text-red-600 "
               role="alert"
             >
               <svg
@@ -180,7 +180,7 @@ import { User } from '../../user';
           <div *ngIf="password.errors?.['minlength']">
             <div
               id="alert-2"
-              class="flex items-center p-1 text-red-600 "
+              class="flex items-center text-red-600 "
               role="alert"
             >
               <svg
