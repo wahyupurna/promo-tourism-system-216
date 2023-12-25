@@ -24,6 +24,7 @@
       <div class="flex items-center">
         <ng-container>
           <ul class="flex flex-row font-medium mt-0 mr-2 space-x-4 text-sm">
+            <ng-container *ngIf="!isLoggedIn">
             <li>
                 <a routerLink="/"
                 routerLinkActive="font-bold text-white"
@@ -34,6 +35,24 @@
                 routerLinkActive="font-bold text-white"
                 [routerLinkActiveOptions]="{ exact: true }">Products</a>
             </li>
+          </ng-container>
+          <ng-container *ngIf="isLoggedIn">
+            <li>
+              <a routerLink="/"
+              routerLinkActive="font-bold text-white"
+              [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li>
+              <a routerLink="/products"
+              routerLinkActive="font-bold text-white"
+              [routerLinkActiveOptions]="{ exact: true }">Products</a>
+          </li>
+            <li>
+              <a routerLink="/user-dashboard"
+              routerLinkActive="font-bold text-white"
+              [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+          </li>
+        </ng-container>
         </ul>
         </ng-container>
       </div>

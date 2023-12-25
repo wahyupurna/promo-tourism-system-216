@@ -10,11 +10,11 @@
             <h1 class="text-2xl leading-loose">
               Welcome, {{ userData.name }}!
             </h1>
-            <ng-container *ngIf="userData.roles == '6554214edf0260336ced32a9'">
+            <ng-container *ngIf="userData.roles == '656d72395a442467024ed5f3'">
               <p class="leading-loose">This is Dashboard for Customer</p>
             </ng-container>
 
-            <ng-container *ngIf="userData.roles == '6554217cdf0260336ced32ab'">
+            <ng-container *ngIf="userData.roles == '656d72565a442467024ed5f4'">
               <p class="leading-loose">
                 This is Dashboard for Tourism Ministry Officer, where you can
                 approve or reject Merchant registration.
@@ -68,7 +68,7 @@
           *ngIf="userData"
           class="bg-gray-100 p-4 rounded-lg shadow space-y-4"
         >
-          <ng-container *ngIf="userData.roles == '6554214edf0260336ced32a9'">
+          <ng-container *ngIf="userData.roles == '656d72395a442467024ed5f3'">
             <h1 class="text-2xl leading-loose">Customer Menu</h1>
 
             <ul class="text-sm space-y-3">
@@ -81,7 +81,14 @@
               </li>
               <li>
                 <a
-                  routerLink="/user-dashboard/my-profile"
+                  routerLink="review-products"
+                  class="underline"
+                  >Review Tourism Products</a
+                >
+              </li>
+              <li>
+                <a
+                  routerLink="my-profile"
                   class="underline"
                   >My Profile</a
                 >
@@ -89,15 +96,22 @@
             </ul>
           </ng-container>
 
-          <ng-container *ngIf="userData.roles == '6554217cdf0260336ced32ab'">
+          <ng-container *ngIf="userData.roles == '656d72565a442467024ed5f4'">
             <h1 class="text-xl leading-loose">Officer Menu</h1>
 
             <ul class="text-sm">
               <li>
                 <a
-                  routerLink="/user-dashboard/account-management"
+                  routerLink="account-management"
                   class="underline"
                   >Account Management</a
+                >
+              </li>
+              <li>
+                <a
+                  routerLink="view-analytics"
+                  class="underline"
+                  >View Analytics Report</a
                 >
               </li>
             </ul>
@@ -112,14 +126,21 @@
               <ul class="text-sm space-y-4">
                 <li>
                   <a
-                    routerLink="/user-dashboard/product-management"
+                    routerLink="product-management"
                     class="underline"
                     >Product Management</a
                   >
                 </li>
                 <li>
                   <a
-                    routerLink="/user-dashboard/change-merchant-password"
+                    routerLink="view-analytics"
+                    class="underline"
+                    >View Analytics Report</a
+                  >
+                </li>
+                <li>
+                  <a
+                    routerLink="change-merchant-password"
                     class="underline"
                     >Change Password</a
                   >
