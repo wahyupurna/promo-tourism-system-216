@@ -4,13 +4,13 @@
       Tourism Products
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-12 gap-4 pb-6">
       <div class="md:col-span-3" *ngFor="let product of products">
         <div
-          class="max-w-2xl bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+          class="max-w-2xl bg-stone-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
         >
           <a routerLink="/products/{{ product._id }}">
-            <img class="h-60 w-auto"
+            <img class="rounded-t-lg bg-cover h-48 w-full transition-all duration-300 opacity-90 hover:opacity-100"
             src="{{ product.image }}"
               alt="{{ product.name }}"
             />
