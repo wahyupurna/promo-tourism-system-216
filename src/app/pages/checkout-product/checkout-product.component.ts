@@ -99,48 +99,4 @@ export class CheckoutProductComponent implements OnInit {
     }
   }
 
-  // processPayment() {
-  //   if (this.checkOutDataForm.valid && this.product && this.product.price) {
-  //     const dateValue = this.date.value;
-  //     const amountPeopleValue = this.amountPeople.value;
-  //     const totalPrice = +this.product.price * +amountPeopleValue;
-
-  //     Swal.fire({
-  //       icon: 'question',
-  //       title: 'Confirm your order before making payment..',
-  //       showCancelButton: true,
-  //       html: `
-  //         <p>Schedule Date: ${dateValue}</p>
-  //         <p>Amount of People: ${amountPeopleValue}</p>
-  //         <p>Total Price: MYR ${totalPrice}</p>
-  //       `,
-  //     }).then((result) => {
-  //       if (result.isConfirmed) {
-  //         const data = {
-  //           name: this.product?.name,
-  //           price: totalPrice,
-  //           quantity: amountPeopleValue,
-  //           order_id: ~~(Math.random() * 100) + 1,
-  //         };
-
-  //         this.midtransService.createPaymentToken(data).subscribe({
-  //           next: (token) => {
-  //             console.log(token);
-  //           },
-  //           error(err) {
-  //             console.error(err);
-  //           },
-  //         });
-
-  //         // Swal.fire(
-  //         //   'Redirecting..',
-  //         //   'You will be navigate to the Midtrans Payment Gateway to complete your order..',
-  //         //   'info'
-  //         // );
-  //       } else {
-  //         Swal.fire('Okay, action canceled!', '', 'info');
-  //       }
-  //     });
-  //   }
-  // }
 }
