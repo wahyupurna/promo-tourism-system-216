@@ -35,6 +35,7 @@ import { CheckoutProductComponent } from './pages/checkout-product/checkout-prod
 import { ReviewTourismProductComponent } from './pages/review-tourism-product/review-tourism-product.component';
 import { ReviewPagesComponent } from './pages/review-tourism-product/review-pages/review-pages.component';
 import { ViewAnalyticsReportComponent } from './pages/view-analytics-report/view-analytics-report.component';
+import { PaymentComponent } from './pages/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { ViewAnalyticsReportComponent } from './pages/view-analytics-report/view
     ReviewTourismProductComponent,
     ReviewPagesComponent,
     ViewAnalyticsReportComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,

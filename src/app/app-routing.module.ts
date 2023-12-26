@@ -19,6 +19,7 @@ import { CheckoutProductComponent } from './pages/checkout-product/checkout-prod
 import { ReviewTourismProductComponent } from './pages/review-tourism-product/review-tourism-product.component';
 import { ReviewPagesComponent } from './pages/review-tourism-product/review-pages/review-pages.component';
 import { ViewAnalyticsReportComponent } from './pages/view-analytics-report/view-analytics-report.component';
+import { PaymentComponent } from './pages/payment/payment.component';
 
 const routes: Routes = [
   { path: '', component: HomeMainComponent, title: 'PromoTourism: Home' },
@@ -82,6 +83,11 @@ const routes: Routes = [
     component: RegisterMerchantComponent,
     title: 'PromoTourism: Register as Merchant',
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'review',
+    component: PaymentComponent,
+    title: 'PromoTourism: Review',
   },
   {
     path: 'user-dashboard',
@@ -152,6 +158,7 @@ const routes: Routes = [
         component: ViewAnalyticsReportComponent,
         title: 'PromoTourism: View Analytics Report',
       },
+
     ],
   },
   { path: '**', component: PageNotFoundComponent, title: '404 - Not Found' },
